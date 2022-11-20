@@ -16,7 +16,7 @@ $(document).ready(function() {
     const data_id = $(this).attr("data_id"),
     data_nama = $(this).attr("data_nama"),
 	data_link = $(this).attr("data_link"),
-    data_str = `<tr class="wishlist-item" id="list_id_${data_id}"><td class="w-pname"><a href="${data_link}">${data_nama}</a></td><td class="w-premove" wpid="${data_id}"><i class="fa-regular fa-trash"></i></td></tr>`;
+    data_str = `<tr class="wishlist-item" id="list_id_${data_id}"><td class="w-pname"><a href="${data_link}">${data_nama}</a></td><td class="w-premove" wpid="${data_id}"><i class="fa-solid fa-x"></i></td></tr>`;
     //check if the element is in the array
     const found = $.inArray(data_id, wish_list) > -1
     if (found) {
@@ -67,7 +67,7 @@ wish_list.forEach(data_id => {
   console.log(data_id,"added");
   const data_nama = $el.attr("data_nama"),
 	data_link = $el.attr("data_link"),
-  data_str = `<tr class="wishlist-item" id="list_id_${data_id}"><td class="w-pname"><a href="${data_link}">${data_nama}</a></td><td class="w-premove" wpid="${data_id}"><i class="fa-regular fa-trash"></i></td></tr>`;
+  data_str = `<tr class="wishlist-item" id="list_id_${data_id}"><td class="w-pname"><a href="${data_link}">${data_nama}</a></td><td class="w-premove" wpid="${data_id}"><i class="fa-solid fa-x"></i></td></tr>`;
       $('#wish_list_item').append(data_str);
 });
 localStorage.setItem(wishlistkey, JSON.stringify(wish_list))
