@@ -1,3 +1,4 @@
+// Original script by https://plungjan.name/SO/lslike/
 var wishlistkey = "wishlist";
     // try and fetch an existing wishlist from the localStorage.
     var wish_list = localStorage.getItem(wishlistkey)
